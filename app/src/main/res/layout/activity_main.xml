@@ -1,0 +1,220 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    tools:context=".MainActivity"
+    android:layout_height="wrap_content"
+
+
+    >
+
+
+<RelativeLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+
+    >
+    <!--remove background color-->
+
+
+
+    <EditText
+        android:id="@+id/UserFirstName"
+        android:layout_width="match_parent"
+        android:layout_marginTop="20dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:background="@drawable/blue_border_rounded_cornwe"
+        android:inputType="text"
+        android:layout_height="50dp"
+        android:hint="First name"
+        android:textAlignment="gravity"
+        android:padding="15dp"
+
+        />
+
+    <EditText
+        android:id="@+id/UserLastName"
+        android:layout_marginTop="20dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginLeft="10dp"
+        android:inputType="text"
+        android:layout_width="match_parent"
+        android:background="@drawable/blue_border_rounded_cornwe"
+        android:layout_below="@+id/UserFirstName"
+        android:layout_height="50dp"
+        android:padding="15dp"
+        android:hint="Last name"
+        />
+
+
+
+    <EditText
+        android:id="@+id/Phone1"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_below="@+id/UserLastName"
+        android:layout_marginRight="10dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="20dp"
+        android:hint="Enter the phone number"
+        android:padding="15dp"
+        android:background="@drawable/blue_border_rounded_cornwe"
+        android:inputType="phone"
+
+        />
+    <EditText
+        android:id="@+id/Phone2"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_below="@+id/Phone1"
+        android:layout_marginRight="10dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="20dp"
+        android:hint="Alternative Phone Number"
+        android:padding="15dp"
+        android:background="@drawable/blue_border_rounded_cornwe"
+        android:inputType="phone"
+        />
+    <EditText
+        android:id="@+id/email"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_below="@+id/Phone2"
+        android:layout_marginRight="10dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/blue_border_rounded_cornwe"
+        android:hint="Email"
+        android:padding="15dp"
+        android:inputType="textEmailAddress"
+
+        />
+
+    <RadioGroup
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="@drawable/blue_border_rounded_cornwe"
+        android:layout_marginTop="20dp"
+        android:layout_below="@+id/email"
+        android:layout_marginRight="10dp"
+        android:layout_marginLeft="10dp"
+        android:orientation="horizontal"
+        android:id="@+id/radioButton"
+
+
+        >
+        <RadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/email"
+            android:text="Male"
+            android:layout_marginLeft="10dp"
+            />
+        <RadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:text="Female"
+            />
+
+        <RadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:text="TransGender"
+            />
+    </RadioGroup>
+
+    <TextView
+        android:id="@+id/Hobbies"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:gravity="center"
+        android:background="@drawable/blue_border_rounded_cornwe"
+        android:layout_below="@+id/radioButton"
+        android:layout_marginTop="20dp"
+        android:textStyle="bold"
+        android:textSize="15sp"
+        android:layout_marginLeft="50dp"
+        android:layout_marginRight="50dp"
+        android:text="Hobbies"
+
+
+
+
+        />
+
+    <CheckBox
+        android:id="@+id/Coding"
+        android:layout_width="150dp"
+        android:layout_height="50dp"
+        android:text="Coding"
+        android:background="@drawable/blue_border_rounded_cornwe"
+        android:layout_marginLeft="10dp"
+        android:layout_below="@+id/Hobbies"
+        android:layout_marginTop="20dp"
+
+
+        />
+
+    <CheckBox
+        android:id="@+id/readingBook"
+        android:layout_width="140dp"
+        android:layout_height="50dp"
+        android:background="@drawable/blue_border_rounded_cornwe"
+        android:layout_below="@+id/Coding"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="20dp"
+        android:text="Reading Books"
+        />
+    <CheckBox
+        android:id="@+id/movies"
+        android:layout_width="150dp"
+        android:layout_height="50dp"
+        android:layout_marginLeft="10dp"
+        android:layout_below="@+id/readingBook"
+        android:background="@drawable/blue_border_rounded_cornwe"
+        android:layout_marginTop="20dp"
+        android:text="Watching Movies"
+        />
+    <CheckBox
+        android:id="@+id/Playing"
+        android:layout_width="100dp"
+        android:layout_height="50dp"
+        android:background="@drawable/blue_border_rounded_cornwe"
+        android:layout_marginLeft="10dp"
+        android:layout_below="@+id/movies"
+        android:layout_marginTop="20dp"
+        android:text="Playing "
+        />
+    <CheckBox
+        android:id="@+id/traveling"
+        android:layout_width="110dp"
+        android:layout_height="50dp"
+        android:background="@drawable/blue_border_rounded_cornwe"
+        android:layout_marginLeft="10dp"
+        android:layout_below="@+id/Playing"
+        android:layout_marginTop="20dp"
+        android:text="Traveling"
+        />
+    <Button
+        android:id="@+id/btn_calculate"
+        android:layout_marginLeft="100dp"
+        android:layout_marginRight="100dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/traveling"
+        android:layout_marginTop="20dp"
+        android:layout_marginBottom="20dp"
+        android:text="Submit"
+        android:textColor="@color/white"
+        android:background="@drawable/rounded_shape_hover"
+        />
+
+</RelativeLayout>
+
+</ScrollView>
+
