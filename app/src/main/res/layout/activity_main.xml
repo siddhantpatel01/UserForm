@@ -27,7 +27,7 @@
         android:layout_marginLeft="10dp"
         android:layout_marginRight="10dp"
         android:background="@drawable/blue_border_rounded_cornwe"
-        android:inputType="text"
+        android:inputType="textCapSentences"
         android:layout_height="50dp"
         android:hint="First name"
         android:textAlignment="gravity"
@@ -40,7 +40,7 @@
         android:layout_marginTop="20dp"
         android:layout_marginRight="10dp"
         android:layout_marginLeft="10dp"
-        android:inputType="text"
+        android:inputType="textCapSentences"
         android:layout_width="match_parent"
         android:background="@drawable/blue_border_rounded_cornwe"
         android:layout_below="@+id/UserFirstName"
@@ -109,6 +109,7 @@
         <RadioButton
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:id="@+id/male"
             android:layout_below="@+id/email"
             android:text="Male"
             android:layout_marginLeft="10dp"
@@ -116,6 +117,7 @@
         <RadioButton
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:id="@+id/Female"
             android:layout_marginLeft="10dp"
             android:text="Female"
             />
@@ -124,6 +126,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginLeft="10dp"
+            android:id="@+id/TransGender"
             android:text="TransGender"
             />
     </RadioGroup>
@@ -201,7 +204,7 @@
         android:text="Traveling"
         />
     <Button
-        android:id="@+id/btn_calculate"
+        android:id="@+id/Submit"
         android:layout_marginLeft="100dp"
         android:layout_marginRight="100dp"
         android:layout_width="match_parent"
@@ -212,6 +215,22 @@
         android:text="Submit"
         android:textColor="@color/white"
         android:background="@drawable/rounded_shape_hover"
+        />
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="500dp"
+        android:layout_below="@id/Submit"
+        android:id="@+id/output"
+        android:padding="20dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginBottom="20dp"
+        android:background="@drawable/blue_border_rounded_cornwe2"
+        android:hint="hello"
+
+
+
+
         />
 
 </RelativeLayout>
