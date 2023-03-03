@@ -10,6 +10,7 @@ import com.example.userform.databinding.ActivityMainBinding
 
 class MainActivity : AppCompatActivity(), View.OnClickListener, RadioGroup.OnCheckedChangeListener {
     private lateinit var binding: ActivityMainBinding
+    private var txtGender: String? = null
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -31,7 +32,7 @@ class MainActivity : AppCompatActivity(), View.OnClickListener, RadioGroup.OnChe
                 val phone2 = binding.Phone2.text.toString()
                 val mail = binding.email.text.toString()
 
-                binding.output.text=" Name :- $Firstname  $Lastname \n Phone NO :- $Phone1 \n Alternate Phone No :- $phone2 \n Email :- $mail "
+                binding.output.text=" Name :- $Firstname  $Lastname \n Phone NO :- $Phone1 \n Alternate Phone No :- $phone2 \n Email :- $mail \n Gender - $txtGender"
 
 
 
@@ -45,20 +46,20 @@ class MainActivity : AppCompatActivity(), View.OnClickListener, RadioGroup.OnChe
         when(group?.checkedRadioButtonId){
             R.id.male ->{
                 val rbMale = findViewById<RadioButton>(checkedId)
-                var gender = rbMale.text.toString()
+                txtGender = rbMale.text.toString()
 //                binding.output.text = "Gender is :- ${rbMale.text.toString()}"
 //                Toast.makeText(this, rbMale.text.toString(), Toast.LENGTH_SHORT).show()
 
             }
             R.id.Female ->{
                 val rbFemale = findViewById<RadioButton>(checkedId)
-                binding.output.text = "Gender is :- ${rbFemale.text.toString()}"
+                txtGender = rbFemale.text.toString()
                 Toast.makeText(this, rbFemale.text.toString(), Toast.LENGTH_SHORT).show()
 
             }
             R.id.TransGender ->{
                 val rbTransgender = findViewById<RadioButton>(checkedId)
-                binding.output.text = "Gender is :- ${rbTransgender.text.toString()}"
+                txtGender = rbTransgender.text.toString()
                 Toast.makeText(this, rbTransgender.text.toString(), Toast.LENGTH_SHORT).show()
             }
 
