@@ -12,6 +12,8 @@ import com.example.userform.databinding.ActivityMainBinding
 class MainActivity : AppCompatActivity(), View.OnClickListener, RadioGroup.OnCheckedChangeListener,
     CompoundButton.OnCheckedChangeListener {
     private lateinit var binding: ActivityMainBinding
+    val list: ArrayList<String> = ArrayList()
+    private val ischecked:Boolean = false
     private var txtGender: String? = null
     private var coding :String? = null
     private var readingbooks :String? =null
@@ -85,9 +87,10 @@ class MainActivity : AppCompatActivity(), View.OnClickListener, RadioGroup.OnChe
                     val Phone1 = binding.Phone1.text.toString()
                     val phone2 = binding.Phone2.text.toString()
                     val mail = binding.email.text.toString()
+                    val lst=list.toString().replace("["," ").replace("]"," ")
 
                     binding.output.text =
-                        " Name :- $Firstname  $Lastname \n Phone NO :- $Phone1 \n Alternate Phone No :- $phone2 \n Email :- $mail \n Gender - $txtGender \n Hobbies \n $coding \n $readingbooks \n $movies \n $playing \n $traveling"
+                        " Name :- $Firstname  $Lastname \n Phone NO :- $Phone1 \n Alternate Phone No :- $phone2 \n Email :- $mail \n Gender - $txtGender \n Hobbies \n ${lst}"
 
 
                 }
@@ -124,24 +127,54 @@ class MainActivity : AppCompatActivity(), View.OnClickListener, RadioGroup.OnChe
     override fun onCheckedChanged(buttonView: CompoundButton?, isChecked: Boolean) {
         when(buttonView?.id){
             R.id.Coding ->{
-                coding=binding.Coding.text.toString()
-                Toast.makeText(this,binding.Coding.text.toString(),Toast.LENGTH_SHORT).show()
+                if(binding.Coding.isChecked){
+                    list.add(binding.Coding.text.toString())
+                   // list.toString().replace("[", "").replace("]", "");
+                }
+                else{
+                    list.remove(binding.Coding.text.toString())
+                }
+
             }
             R.id.readingBook ->{
-                readingbooks=binding.readingBook.text.toString()
-                Toast.makeText(this,binding.readingBook.text.toString(),Toast.LENGTH_SHORT).show()
+                if(binding.readingBook.isChecked){
+                    list.add(binding.readingBook.text.toString())
+
+                }
+                else{
+                    list.remove(binding.readingBook.text.toString())
+                }
+
             }
             R.id.movies ->{
-                movies = binding.movies.text.toString()
-                Toast.makeText(this,binding.movies.text.toString(),Toast.LENGTH_SHORT).show()
+                if(binding.movies.isChecked){
+                    list.add(binding.movies.text.toString())
+                    // list.toString().replace("[", "").replace("]", "");
+                }
+                else{
+                    list.remove(binding.movies.text.toString())
+                }
+
             }
             R.id.Playing ->{
-                playing = binding.Playing.text.toString()
-                Toast.makeText(this,binding.Playing.text.toString(),Toast.LENGTH_SHORT).show()
+                if(binding.Playing.isChecked){
+                    list.add(binding.Playing.text.toString())
+                    // list.toString().replace("[", "").replace("]", "");
+                }
+                else{
+                    list.remove(binding.Playing.text.toString())
+                }
+
             }
             R.id.traveling ->{
-                traveling = binding.traveling.text.toString()
-                Toast.makeText(this,binding.traveling.text.toString(),Toast.LENGTH_SHORT).show()
+                if(binding.traveling.isChecked){
+                    list.add(binding.traveling.text.toString())
+                    // list.toString().replace("[", "").replace("]", "");
+                }
+                else{
+                    list.remove(binding.traveling.text.toString())
+                }
+
             }
         }
     }
