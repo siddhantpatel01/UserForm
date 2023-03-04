@@ -226,7 +226,7 @@
         android:layout_marginRight="10dp"
         android:layout_marginBottom="20dp"
         android:background="@drawable/blue_border_rounded_cornwe2"
-        android:hint="hello"
+        android:hint="Users Information"
 
 
 
